@@ -5,7 +5,7 @@ import React, { Fragment } from 'react';
 const Navbar = () => {
     return (
 
-        <Popover className="absolute top-0 w-full bg-white">
+        <Popover className="absolute z-10 w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                     <div className="flex lg:w-0 justify-start flex-1">
@@ -26,10 +26,10 @@ const Navbar = () => {
                     </div>
                     <Popover as="nav" className="hidden md:flex space-x-10">
                         <div className="hidden md:flex items-center">
-                            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                            <a href="/" className="text-base font-medium text-white hover:text-gray-900">
                                 Pricing
                             </a>
-                            <a href="/" className="ml-8 text-base font-medium text-gray-500 hover:text-gray-900">
+                            <a href="/" className="ml-8 text-base font-medium text-white hover:text-gray-900">
                                 Docs
                             </a>
                         </div>
