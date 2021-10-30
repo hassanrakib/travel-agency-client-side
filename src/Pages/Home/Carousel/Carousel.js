@@ -58,13 +58,6 @@ const Carousel = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className='bg-carousel-img-2 h-screen bg-center bg-cover'>
-                <h4>Climbing Mountain</h4>
-                <h1>Amazing Place for Adventure</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates esse facere, doloremque itaque maiores ab vero dignissimos, atque nam sint aspernatur? Repudiandae facere sed aut.</p>
-                <button>Discover More</button>
-            </div> */}
         </Slider>
     );
 };
