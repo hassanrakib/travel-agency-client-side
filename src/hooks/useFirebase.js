@@ -13,9 +13,7 @@ const useFirebase = () => {
     const provider = new GoogleAuthProvider();
 
     const logInWithPopup = () => {
-        signInWithPopup(auth, provider)
-            .then(result => setUser(result.user))
-            .catch(err => setError(err.message));
+        return signInWithPopup(auth, provider);
     }
 
     const logOut = () => {
@@ -29,8 +27,8 @@ const useFirebase = () => {
             if (user) {
                 setUser(user);
             }
+            setIsLoading(false);
         })
-        setIsLoading(false);
     }, [auth]);
 
 
