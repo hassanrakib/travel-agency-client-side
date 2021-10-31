@@ -4,7 +4,7 @@ const ManageAllBookings = () => {
     const [matchedCount, setMatchedCount] = useState(0);
     const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/all-bookings`)
+        fetch(`https://shocking-goosebumps-52929.herokuapp.com/all-bookings`)
             .then(res => res.json())
             .then(data => {
                 setAllBookings(data);
@@ -15,7 +15,7 @@ const ManageAllBookings = () => {
         const answer = window.confirm('Are you sure you want to cancel?');
 
         if (answer) {
-            fetch(`http://localhost:5000/cancel-booking/${id}`, {
+            fetch(`https://shocking-goosebumps-52929.herokuapp.com/cancel-booking/${id}`, {
                 method:"DELETE",
                 headers: {
                     'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const ManageAllBookings = () => {
         }
     }
     const approve = id => {
-        fetch(`http://localhost:5000/update-booking/${id}`, {
+        fetch(`https://shocking-goosebumps-52929.herokuapp.com/update-booking/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'

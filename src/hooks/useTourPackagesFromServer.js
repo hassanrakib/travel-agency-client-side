@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useTourPackagesFromServer = () => {
     const [tourPackages, setTourPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tour-packages')
+        fetch('https://shocking-goosebumps-52929.herokuapp.com/tour-packages')
             .then(res => res.json())
             .then(packages => setTourPackages(packages));
     }, []);

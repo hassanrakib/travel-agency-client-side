@@ -6,7 +6,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/my-bookings/${user?.email}`)
+        fetch(`https://shocking-goosebumps-52929.herokuapp.com/my-bookings/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setBookings(data);
@@ -17,7 +17,7 @@ const MyBookings = () => {
         const answer = window.confirm('Are you sure you want to cancel?');
 
         if (answer) {
-            fetch(`http://localhost:5000/cancel-booking/${id}`, {
+            fetch(`https://shocking-goosebumps-52929.herokuapp.com/cancel-booking/${id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json'

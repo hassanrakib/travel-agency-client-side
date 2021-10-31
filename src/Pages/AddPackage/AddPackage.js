@@ -32,7 +32,7 @@ const AddPackage = () => {
             },
             status: 'Pending'
         };
-        fetch('http://localhost:5000/new-package', {
+        fetch('https://shocking-goosebumps-52929.herokuapp.com/new-package', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

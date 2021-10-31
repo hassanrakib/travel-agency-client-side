@@ -8,7 +8,7 @@ const PlaceOrder = () => {
     const { id } = useParams();
     const [tourPackage, setTourPackage] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/place-order/${id}`)
+        fetch(`https://shocking-goosebumps-52929.herokuapp.com/place-order/${id}`)
             .then(res => res.json())
             .then(tourPackage => setTourPackage(tourPackage));
     }, [id]);
@@ -17,7 +17,7 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.orderedPackage = tourPackage;
         data.status = "Pending";
-        fetch('http://localhost:5000/booking-confirm', {
+        fetch('https://shocking-goosebumps-52929.herokuapp.com/booking-confirm', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
