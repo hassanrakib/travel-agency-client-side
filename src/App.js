@@ -13,6 +13,7 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import AddPackage from './Pages/AddPackage/AddPackage';
 import MyBookings from './Pages/MyBookings/MyBookings';
 import ManageAllBookings from './Pages/ManageAllBookings/ManageAllBookings';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
             <PrivateRoute path='/all-bookings'>
               <ManageAllBookings></ManageAllBookings>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

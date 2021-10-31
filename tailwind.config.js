@@ -11,6 +11,7 @@ module.exports = {
         'place-order': "linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('https://source.unsplash.com/g30P1zcOzXo')",
         'add-package': "linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('https://source.unsplash.com/NRQV-hBF10M')",
         'my-bookings': "linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('https://source.unsplash.com/4QWR5geRC9I')",
+        'not-found': "linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('https://i.ibb.co/jL8s1ZW/Internet-network-warning-404-Error-Page-or-File-not-found-for-web-page-Internet-error-page-or-issue.jpg')",
       }
     },
   },

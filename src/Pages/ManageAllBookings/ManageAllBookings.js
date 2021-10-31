@@ -55,7 +55,7 @@ const ManageAllBookings = () => {
                     allBookings.map(booking => (
                         <div className='shadow-lg p-3 my-5 md:flex justify-around' key={booking?._id}>
                             <h2 className='text-2xl font-bold md:mb-0 mb-5'>{booking?.orderedPackage?.title} - {booking?.orderedPackage?.details.duration} Tour ({booking?.status})</h2>
-                            <button onClick={() => cancelBooking(booking?._id)} className='bg-red-400 px-8 py-3 rounded-lg text-white font-bold cursor-pointer'>Cancel Booking</button>
+                            <button onClick={() => cancelBooking(booking?._id)} className='bg-red-400 px-8 py-3 rounded-lg text-white font-bold cursor-pointer md:mb-0 mb-5'>Cancel Booking</button>
                             <button className='bg-red-400 px-8 py-3 rounded-lg text-white font-bold cursor-pointer' onClick={() => approve(booking?._id)} >Approve</button>
                         </div>
                     ))
