@@ -2,6 +2,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Navbar = () => {
@@ -15,14 +16,10 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                     <div className="flex lg:w-0 justify-start flex-1">
-                        <a href="/">
-                            <span className="sr-only">Workflow</span>
-                            <img
-                                className="h-8 w-auto sm:h-10"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                alt=""
-                            />
-                        </a>
+                        <Link to="/">
+                            <span className="sr-only">Travel Agency</span>
+                            <img className="h-8 w-auto sm:h-10" src="https://img.icons8.com/dotty/80/ffffff/summer.png" alt="" />
+                        </Link>
                     </div>
                     <div className="-mr-2 -my-2 md:hidden">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -31,14 +28,20 @@ const Navbar = () => {
                         </Popover.Button>
                     </div>
                     <Popover as="nav" className="hidden md:flex space-x-10">
-                        <div className="hidden md:flex items-center">
-                            <a href="/" className="text-base font-medium text-white hover:text-gray-900">
-                                Pricing
-                            </a>
-                            <a href="/" className="ml-8 text-base font-medium text-white hover:text-gray-900">
-                                Docs
-                            </a>
-                        </div>
+                        {
+                            user?.email &&
+                            <div className="hidden md:flex items-center">
+                                <Link to="/add-package" className="text-base font-medium text-white hover:text-gray-900">
+                                    Add Package
+                                </Link>
+                                <Link to="/my-bookings" className="ml-8 text-base font-medium text-white hover:text-gray-900">
+                                    My Bookings
+                                </Link>
+                                <Link to="/all-bookings" className="ml-8 text-base font-medium text-white hover:text-gray-900">
+                                    All Bookings
+                                </Link>
+                            </div>
+                        }
                         <div className="hidden md:flex items-center">
                             <button
                                 onClick={signInSignOut}
@@ -67,8 +70,8 @@ const Navbar = () => {
                                 <div>
                                     <img
                                         className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                        alt="Workflow"
+                                        src="https://img.icons8.com/dotty/80/000000/summer.png"
+                                        alt="Travel Agency"
                                     />
                                 </div>
                                 <div className="-mr-2">
@@ -79,20 +82,28 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="mt-6">
-                                <nav className="grid gap-y-8">
-                                    <a
-                                        href='/'
-                                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                                    >
-                                        <span className="text-base font-medium text-gray-900">Pricing</span>
-                                    </a>
-                                    <a
-                                        href='/'
-                                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                                    >
-                                        <span className="text-base font-medium text-gray-900">Docs</span>
-                                    </a>
-                                </nav>
+                                {
+                                    user?.email &&
+                                    <nav className="grid gap-y-8">
+                                        <Link
+                                            to='/add-package'
+                                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                        >
+                                            <span className="text-base font-medium text-gray-900">Add Package</span>
+                                        </Link>
+                                        <Link
+                                            to='/my-bookings'
+                                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                        >
+                                            <span className="text-base font-medium text-gray-900">My Bookings</span>
+                                        </Link>
+                                        <Link
+                                            to='/all-bookings'
+                                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                        >
+                                            <span className="text-base font-medium text-gray-900">All Bookings</span>
+                                        </Link>
+                                    </nav>}
                             </div>
                         </div>
                         <div className="py-6 px-5 space-y-6">

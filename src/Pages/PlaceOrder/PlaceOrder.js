@@ -16,6 +16,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         data.orderedPackage = tourPackage;
+        data.status = "Pending";
         fetch('http://localhost:5000/booking-confirm', {
             method: 'POST',
             headers: {

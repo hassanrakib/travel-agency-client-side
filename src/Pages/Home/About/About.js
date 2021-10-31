@@ -11,10 +11,10 @@ const About = () => {
             </div>
             <div className='relative mt-5 md:mt-0'>
                 <div className='md:absolute md:w-5/6 md:h-3/4'>
-                    <img className='w-full h-full object-cover rounded-lg' src="https://source.unsplash.com/random/600x400" alt="" />
+                    <img className='w-full h-full object-cover rounded-lg' src="https://source.unsplash.com/u9iDLStoxyE/600x400" alt="" />
                 </div>
                 <div className='md:absolute md:top-1/3 md:left-1/3 mt-5 md:mt-0'>
-                    <img className='w-full h-full object-cover rounded-lg filter drop-shadow-2xl' src="https://source.unsplash.com/random/600x330" alt="" />
+                    <img className='w-full h-full object-cover rounded-lg filter drop-shadow-2xl' src="https://source.unsplash.com/UVyOfX3v0Ls/600x330" alt="" />
                 </div>
             </div>
         </div>

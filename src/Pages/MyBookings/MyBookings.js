@@ -18,7 +18,7 @@ const MyBookings = () => {
 
         if (answer) {
             fetch(`http://localhost:5000/cancel-booking/${id}`, {
-                method:"DELETE",
+                method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -40,12 +40,17 @@ const MyBookings = () => {
             </div>
             <div className='my-12 max-w-6xl mx-auto px-2'>
                 {
-                    bookings.map(booking => (
-                        <div className='shadow-lg p-3 my-5 md:flex justify-around' key={booking?._id}>
-                            <h2 className='text-2xl font-bold md:mb-0 mb-5'>{booking?.orderedPackage?.title} - {booking?.orderedPackage?.details.duration} Tour</h2>
-                            <button onClick={() => cancelBooking(booking?._id)} className='bg-red-400 px-8 py-3 rounded-lg text-white font-bold cursor-pointer'>Cancel Booking</button>
+                    bookings.length === 0 ?
+                        <div className="flex justify-center items-center my-5 p-3">
+                            <p className='text-xl'>No Bookings Found!</p>
                         </div>
-                    ))
+                        :
+                        bookings.map(booking => (
+                            <div className='shadow-lg p-3 my-5 md:flex justify-around' key={booking?._id}>
+                                <h2 className='text-2xl font-bold md:mb-0 mb-5'>{booking?.orderedPackage?.title} - {booking?.orderedPackage?.details.duration} Tour ({booking?.status})</h2>
+                                <button onClick={() => cancelBooking(booking?._id)} className='bg-red-400 px-8 py-3 rounded-lg text-white font-bold cursor-pointer'>Cancel Booking</button>
+                            </div>
+                        ))
                 }
             </div>
         </div>
