@@ -1,11 +1,10 @@
-# Travel Agency Web App
+# Travel Agency App
 
-Live link: [Travel Agency](https://travel-agency-web-app.web.app/).
+Live Website: [Travel Agency](https://travel-agency-web-app.web.app/).
 
-## Why Travel Agency App?
+## Notable things I did in this project?
 
-- Book tour anywhere anytime.
-- Cancel tour bookings.
-- Approve tour bookings.
-- See different tour packages.
-- Contact with the agency.
+- Created carousel with React Slick.
+- Utilized React Hook form.
+- Applied Firebase authentication system.
+- Implemented data loading, sending and updating through backend.
