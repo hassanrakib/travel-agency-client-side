@@ -2,7 +2,7 @@
 
 Live Website: [Travel Agency](https://travel-agency-web-app.web.app/).
 
-## Notable things I did in this project?
+## Notable things I did in this project:
 
 - Created carousel with React Slick.
 - Utilized React Hook form.
